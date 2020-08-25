@@ -1,4 +1,4 @@
-package com.github.odaridavid.composeapp.ui
+package com.github.odaridavid.composeapp.helpers
 
 import androidx.ui.graphics.Color
 

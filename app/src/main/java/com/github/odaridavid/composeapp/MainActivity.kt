@@ -6,7 +6,7 @@ import androidx.compose.Composable
 import androidx.ui.core.setContent
 import androidx.ui.foundation.Text
 import androidx.ui.tooling.preview.Preview
-import com.github.odaridavid.composeapp.ui.ComposeAppTheme
+import com.github.odaridavid.composeapp.helpers.ComposeAppTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
