@@ -2,9 +2,9 @@ package com.github.odaridavid.composeapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.Composable
-import androidx.ui.core.setContent
-import androidx.ui.foundation.Text
+import androidx.compose.foundation.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.setContent
 import androidx.ui.tooling.preview.Preview
 import com.github.odaridavid.composeapp.helpers.ComposeAppTheme
 
@@ -24,7 +24,7 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun DefaultPreview() {
     ComposeAppTheme {

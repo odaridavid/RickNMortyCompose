@@ -1,8 +1,8 @@
 package com.github.odaridavid.composeapp.helpers
 
-import androidx.ui.graphics.Color
+import androidx.compose.ui.graphics.Color
 
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
+internal val purple200 = Color(0xFFBB86FC)
+internal val purple500 = Color(0xFF6200EE)
+internal val purple700 = Color(0xFF3700B3)
+internal val teal200 = Color(0xFF03DAC5)
