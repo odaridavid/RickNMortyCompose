@@ -19,5 +19,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Build Debug
-        run: ./gradlew assembleDebug
+      - name: Gradle Build
+        run: |
+          sudo apt install android-sdk
+          sdkmanager "platform-tools"
+          sdkmanager "build-tools;30.0.2"
+          ./gradlew build
