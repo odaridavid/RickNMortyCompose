@@ -20,4 +20,6 @@ jobs:
         with:
           java-version: 1.8
       - name: Gradle Build
-        run: ./gradlew build
+        run: |
+          sudo apt install android-sdk
+          ./gradlew build
