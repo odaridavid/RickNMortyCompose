@@ -10,10 +10,9 @@ on:
     types:
       - created
 jobs:
-  gradle_build:
-    name: Gradle Build
+  android:
+    name: Android
     runs-on: ubuntu-latest
     steps:
-      - name: Assemble Debug
-        run: |
-        ./gradlew build
+      - name: Gradle Build
+        run: ./gradlew build
