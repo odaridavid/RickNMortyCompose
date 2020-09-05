@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        compose_version = '1.0.0-alpha01'
+        compose_version = '1.0.0-alpha02'
         kotlin_version = "1.4.0"
     }
     repositories {
@@ -8,7 +8,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0-alpha08'
+        classpath 'com.android.tools.build:gradle:4.2.0-alpha09'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
