@@ -1,5 +1,7 @@
 # Plana
 
+![Plana CI Workflow](https://github.com/odaridavid/Plana/workflows/Plana%20CI%20Workflow/badge.svg)
+
 A daily planner Android app built with Jetpack Compose
 
 ## Table of Contents
