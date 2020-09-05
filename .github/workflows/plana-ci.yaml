@@ -11,17 +11,12 @@ on:
       - created
 jobs:
   android:
-    name: Android
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: set up JDK 1.8
+      - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Gradle Build
-        run: |
-          sudo apt install android-sdk
-          sdkmanager "platform-tools"
-          sdkmanager "build-tools;30.0.2"
-          ./gradlew build
+      - name: Build Project
+        run: bash ./gradlew build
