@@ -1,8 +1,8 @@
-# Plana
+# Rick N Morty Compose 
 
 ![RickNMorty CI Workflow](https://github.com/odaridavid/RickNMortyCompose/workflows/RickNMorty%20CI%20Workflow/badge.svg)
 
-A daily planner Android app built with Jetpack Compose
+A rick and morty app built with Jetpack Compose
 
 ## Table of Contents
 
