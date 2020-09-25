@@ -1,6 +1,6 @@
 # Plana
 
-![RickNMorty CI Workflow](https://github.com/odaridavid/RickNMorty/workflows/RickNMorty%20CI%20Workflow/badge.svg)
+![RickNMorty CI Workflow](https://github.com/odaridavid/RickNMortyCompose/workflows/RickNMorty%20CI%20Workflow/badge.svg)
 
 A daily planner Android app built with Jetpack Compose
 
