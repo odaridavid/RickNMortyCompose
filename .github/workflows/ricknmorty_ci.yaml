@@ -1,4 +1,4 @@
-name: Plana CI Workflow
+name: RickNMorty CI Workflow
 on:
   push:
     branches:
