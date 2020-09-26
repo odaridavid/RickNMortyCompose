@@ -1,4 +1,4 @@
-package com.github.odaridavid.ricknmorty
+package com.github.odaridavid.ricknmorty.features.allcharacters.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
@@ -15,10 +15,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
-
+import com.github.odaridavid.ricknmorty.R
 
 @Composable
-fun NewsStory() {
+fun AllCharactersScreen(){
+    CharacterItem()
+}
+
+@Composable
+private fun CharacterItem() {
 
     val image = imageResource(id = R.drawable.header)
     MaterialTheme {
@@ -64,6 +69,6 @@ fun NewsStory() {
 
 @Preview(showBackground = true)
 @Composable
-fun NewsStoryPreview() {
-    NewsStory()
+fun AllCharactersScreenPreview() {
+    AllCharactersScreen()
 }
