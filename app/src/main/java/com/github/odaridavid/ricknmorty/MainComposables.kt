@@ -1,4 +1,4 @@
-package com.github.odaridavid.composeapp
+package com.github.odaridavid.ricknmorty
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
