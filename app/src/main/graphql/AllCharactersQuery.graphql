@@ -1,0 +1,14 @@
+query AllCharacters{
+    characters{
+        info{
+            count
+            next
+            prev
+            pages
+        }
+        results{
+            image
+            name
+        }
+    }
+}
