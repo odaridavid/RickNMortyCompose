@@ -30,11 +30,12 @@ class AllCharactersViewModel @ViewModelInject constructor(
                 .flowOn(Dispatchers.IO)
                 .collect { result ->
                     when (result) {
-                        is State.Success -> {
-                            _characters.value = result.data
-                        }
-                        is State.Error -> {
-                            _error.value = result.throwable?.message
+                        is State.Complete -> {
+                            if (result.data != null) {
+                                _characters.value = result.data
+                            } else if (result.error != null) {
+                                _error.value = result.error
+                            }
                         }
                     }
                 }
