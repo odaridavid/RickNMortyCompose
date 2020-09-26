@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id("com.android.application")
+    id("kotlin-android")
+    id("com.apollographql.apollo").version("$apollo_version")
 }
 
 android {
@@ -49,6 +50,12 @@ dependencies {
     implementation "androidx.compose.animation:animation:$compose_version"
     //For @Preview
     implementation "androidx.ui:ui-tooling:$compose_version"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.6"
+    implementation("com.apollographql.apollo:apollo-runtime:$apollo_version")
+    implementation("com.apollographql.apollo:apollo-rx3-support:$apollo_version")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation("io.coil-kt:coil:1.0.0-rc3")
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
