@@ -1,0 +1,14 @@
+query AllCharacters($page:Int =1){
+    characters(page:$page){
+        info{
+            count
+            next
+            prev
+            pages
+        }
+        results{
+            image
+            name
+        }
+    }
+}
