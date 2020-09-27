@@ -22,5 +22,8 @@ class MainActivity : AppCompatActivity() {
         allCharactersViewModel.error.observe(this) { errorMessage ->
             Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
         }
+        allCharactersViewModel.characters.observe(this) { characters ->
+            Toast.makeText(this, "$characters", Toast.LENGTH_LONG).show()
+        }
     }
 }
