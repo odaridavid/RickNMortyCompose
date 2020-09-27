@@ -1,2 +1,2 @@
 rootProject.name = "RickNMortyCompose"
-include ':app'
+include("app")
