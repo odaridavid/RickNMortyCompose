@@ -1,6 +1,5 @@
 package com.github.odaridavid.ricknmorty.features.allcharacters.data
 
-import com.github.odaridavid.ricknmorty.common.ExceptionHandler
 import com.github.odaridavid.ricknmorty.common.State
 import com.github.odaridavid.ricknmorty.models.Character
 import com.github.odaridavid.ricknmorty.remote.RickNMortyRemoteDataSource
@@ -17,10 +16,9 @@ class AllCharactersRepository @Inject constructor() {
             .distinctUntilChanged()
             .map { remoteCharacters ->
                 val characters = remoteCharacters?.toDomain()
-                State.Complete(data = characters)
+                State.Success(data = characters) as State<List<Character>>
             }
             .catch { throwable ->
-                val msg = ExceptionHandler.parse(throwable = throwable)
-                emit(State.Complete(error = msg))
+                emit(State.Error(throwable = throwable) as State<List<Character>>)
             }
 }
