@@ -1,9 +1,9 @@
 package com.github.odaridavid.ricknmorty
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.platform.setContent
 import com.github.odaridavid.ricknmorty.features.allcharacters.ui.AllCharactersScreen
 import com.github.odaridavid.ricknmorty.features.allcharacters.ui.AllCharactersViewModel
@@ -12,18 +12,17 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private val allCharactersViewModel: AllCharactersViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AllCharactersScreen()
+            val allCharactersViewModel: AllCharactersViewModel by viewModels()
+            allCharactersViewModel.characters.observeAsState().value?.let { characters ->
+                AllCharactersScreen(characters = characters)
+            }
+
         }
-        allCharactersViewModel.error.observe(this) { errorMessage ->
-            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
-        }
-        allCharactersViewModel.characters.observe(this) { characters ->
-            Toast.makeText(this, "$characters", Toast.LENGTH_LONG).show()
-        }
+//        allCharactersViewModel.error.observe(this) { errorMessage ->
+//            Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show()
+//        }
     }
 }

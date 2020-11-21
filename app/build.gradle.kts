@@ -33,6 +33,7 @@ android {
         targetCompatibility(JavaVersion.VERSION_1_8)
     }
     kotlinOptions {
+        useIR = true
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
     buildFeatures {
@@ -69,6 +70,8 @@ dependencies {
     implementation(Dependencies.Jetpack.Compose.uiTooling)
     kapt(Dependencies.Jetpack.hiltLifecycleCompiler)
     kapt(Dependencies.Jetpack.hiltAndroidCompiler)
+    implementation ("androidx.compose.runtime:runtime-livedata:1.0.0-alpha07")
+    implementation("dev.chrisbanes.accompanist:accompanist-coil:0.3.3.1")
 
     // endregion
 

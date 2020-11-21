@@ -10,7 +10,7 @@ object Versions {
         const val appCompatVersion = "1.2.0"
         const val lifecycleKtxVersion = "2.2.0"
         const val activityKtxVersion = "1.1.0"
-        const val composeVersion = "1.0.0-alpha03"
+        const val composeVersion = "1.0.0-alpha07"
         const val hiltVersion = "2.28-alpha"
         const val hiltLifecycleVersion = "1.0.0-alpha02"
     }
